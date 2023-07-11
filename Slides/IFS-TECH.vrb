@@ -1,0 +1,27 @@
+\frametitle{Functions}
+
+We can create a simple function with the following text:
+\vspace{-0.5cm}
+\begin{lstlisting}
+function square_then_double( input )
+# This function outputs the twice the square of the input
+
+output = 2 * (input.^2)
+
+return output
+end
+\end{lstlisting}
+\vspace{-0.5cm}
+Rather than having in the main script, we save it as e.g. \mcode{square_then_double.jl}.
+
+\vspace{0.5cm}
+
+To use this function, we need to `include' the file that defines it in our main script:
+\vspace{-0.5cm}
+\begin{lstlisting}
+include("functions/square_then_double.jl")
+E = square_then_double(A)
+\end{lstlisting}
+\vspace{-0.5cm}
+This code assigns the value \texttt{[1, 4, 9]} to \mcode{E}.
+
